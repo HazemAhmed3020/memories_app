@@ -27,10 +27,10 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
           if (kDebugMode) {
             print(state.errMessage);
           }
-          else if(state is AddNoteSuccess){
-            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-            Navigator.pop(context);
-          }
+        }
+        else if(state is AddNoteSuccess){
+          BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+          Navigator.pop(context);
         }
       },
       builder: (context, state) {
