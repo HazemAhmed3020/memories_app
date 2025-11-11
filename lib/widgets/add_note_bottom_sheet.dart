@@ -5,6 +5,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
+import 'package:notes_app/widgets/colors_list.dart';
 import 'custom_bottom.dart';
 import 'custom_text_field.dart';
 
@@ -62,7 +63,9 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
                           content = data;
                         },
                       ),
-                      SizedBox(height: 100),
+                      SizedBox(height: 15),
+                      ColorsListView(),
+                      SizedBox(height: 50),
                       CustomButton(txt: 'Add',
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
