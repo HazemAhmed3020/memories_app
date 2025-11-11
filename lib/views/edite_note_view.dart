@@ -29,6 +29,7 @@ class _EditeNoteViewState extends State<EditeNoteView> {
                 onTap: () {
                   widget.note.title = title ?? widget.note.title;
                   widget.note.subtitle = content ?? widget.note.subtitle;
+                  widget.note.save();
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                   Navigator.pop(context);
                 }

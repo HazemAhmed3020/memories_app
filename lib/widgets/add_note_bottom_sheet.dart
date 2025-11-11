@@ -39,7 +39,11 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
           child: ModalProgressHUD(
             inAsyncCall: state is AddNoteLoading? true : false,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(
+                left: 10,
+                right: 10,
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+              ),
               child: ListView(
                 children: [
                   Column(
